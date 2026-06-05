@@ -1,0 +1,267 @@
+/* --- Variabel Warna Tema Biru & Ungu --- */
+:root {
+    --bg-main: #f5f3ff; /* Latar belakang ungu sangat muda */
+    --bg-card: #ffffff;
+    --text-primary: #1e1b4b; /* Teks ungu gelap */
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    
+    /* Kombinasi Biru dan Ungu */
+    --color-blue: #3b82f6;
+    --color-purple: #8b5cf6;
+    
+    /* Gradasi Biru ke Ungu */
+    --gradient-primary: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+    --gradient-hover: linear-gradient(135deg, #2563eb, #7c3aed);
+
+    --bg-main: #f5f3ff;
+    --bg-card: #ffffff;
+    --text-primary: #1e1b4b;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --color-blue: #3b82f6;
+    --color-purple: #8b5cf6;
+    --gradient-primary: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+    --gradient-hover: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* --- Konfigurasi Dark Mode --- */
+body.dark-mode {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+}
+
+/* Terapkan transisi halus agar enak dilihat saat toggle */
+body, .hero-section, .content-section, .contact-form input, .contact-form textarea, .main-footer {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* --- Penyesuaian Komponen untuk Dark Mode --- */
+body.dark-mode .edu-table tr:hover {
+    background-color: #2d3748;
+}
+
+body.dark-mode .contact-form input, 
+body.dark-mode .contact-form textarea {
+    background-color: #0f172a;
+    color: white;
+}
+
+/* Tombol Toggle */
+.theme-btn {
+    background: white;
+    color: var(--color-purple);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gradient-primary); /* Navbar gradasi */
+    padding: 1rem 10%;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* --- Layout Main Container --- */
+.container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem;
+    background-color: var(--bg-card);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.1); /* Bayangan ungu tipis */
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.img-container {
+    padding: 5px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+}
+
+.profile-img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    display: block;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+/* --- General Content Styling --- */
+.content-section {
+    margin-bottom: 3rem;
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.05);
+}
+
+.gradient-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--color-purple);
+    padding-bottom: 0.25rem;
+}
+
+/* --- Table Styling --- */
+.edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.edu-table th, .edu-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.edu-table th {
+    background: var(--gradient-primary);
+    color: white;
+    font-weight: 600;
+}
+
+.edu-table tr:hover {
+    background-color: #f8fafc;
+}
+
+/* --- Contact Form Styling --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-purple);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn-submit {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-submit:hover {
+    background: var(--gradient-hover);
+    transform: translateY(-2px); /* Efek tombol terangkat sedikit */
+}
+
+/* --- Footer --- */
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1e1b4b; /* Biru sangat gelap (Navy) */
+    color: #a78bfa; /* Ungu pastel */
+    margin-top: 3rem;
+}

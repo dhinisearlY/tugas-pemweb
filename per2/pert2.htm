@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Mahasiswa TI UIR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        body.dark-mode .navbar, 
+        body.dark-mode .main-footer {
+            background-color: #1f1f1f;
+        }
+        body.dark-mode .edu-table,
+        body.dark-mode .contact-form input,
+        body.dark-mode .contact-form textarea {
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
+
+        /* Tombol Toggle */
+        .theme-btn {
+            cursor: pointer;
+            padding: 8px 16px;
+            margin-left: 20px;
+            border-radius: 5px;
+            border: none;
+            background: #333;
+            color: #fff;
+        }
+        body.dark-mode .theme-btn {
+            background: #f0f0f0;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-logo">Portofolio.</div>
+        <nav>
+            <ul class="nav-links" style="list-style: none; display: flex; gap: 20px;">
+                <li style="cursor: default;">About</li>
+                <li style="cursor: default;">Education</li>
+                <li style="cursor: default;">Contact</li>
+            </ul>
+        </nav>
+        <button class="theme-btn" onclick="toggleTheme()">Toggle Mode</button>
+    </header>
+
+    <main class="container">
+        <section id="hero" class="hero-section">
+            <div class="img-container">
+                <img src="D:\VSCODE\pemweb\per2\img1\WhatsApp Image 2026-06-06 at 04.27.37.jpeg" alt="Foto Profil" class="profile-img">
+            </div>
+            <div class="hero-text">
+                <h2>Halo, Saya Dhini Searly</h2>
+                <p>Web Developer | Informatics Engineering Student at UIR</p>
+            </div>
+        </section>
+
+        <article id="about" class="content-section">
+            <h2 class="gradient-text">Tentang Saya</h2>
+            <p>Saya adalah mahasiswa Teknik Informatika yang sedang mendalami teknologi pengembangan web khususnya di sisi frontend menggunakan HTML5 dan CSS3.</p>
+        </article>
+
+        <section id="education" class="content-section">
+            <h2 class="gradient-text">Riwayat Pendidikan</h2>
+            <table class="edu-table">
+                <thead>
+                    <tr>
+                        <th>Tahun</th>
+                        <th>Institusi</th>
+                        <th>Jurusan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024 - Sekarang</td>
+                        <td>Universitas Islam Riau</td>
+                        <td>Teknik Informatika</td>
+                    </tr>
+                    <tr>
+                        <td>2021 - 2024</td>
+                        <td>SMK Akbar Pekanbaru</td>
+                        <td>TKJ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2 class="gradient-text">Hubungi Saya</h2>
+            <form action="" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap:</label>
+                    <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="contoh@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" rows="4" placeholder="Tulis pesan Anda di sini" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Teknik Informatika UIR. Disusun oleh Searly.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+</html>
